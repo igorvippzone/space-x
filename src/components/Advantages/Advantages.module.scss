@@ -1,0 +1,158 @@
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  z-index: 1;
+
+  @media (max-width: 991px) {
+    .bgDeg45,
+    .bgDeg315,
+    .bgDeg135,
+    .bgDeg225 {
+      background-color: rgba(0, 0, 0, 0.377);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.582);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.bgDeg45 {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  &::after {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  &::before {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+  }
+  &:hover {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    &::after {
+      background: linear-gradient(0, #545960, rgba(255, 255, 255, 0));
+    }
+    &::before {
+      background: linear-gradient(90deg, #545960, rgba(255, 255, 255, 0));
+    }
+  }
+}
+.bgDeg315 {
+  background: linear-gradient(
+    315deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+
+  &::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  &::before {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+  }
+  &:hover {
+    background: linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+
+    &::after {
+      background: linear-gradient(0, #545960, rgba(255, 255, 255, 0));
+    }
+    &::before {
+      background: linear-gradient(270deg, #545960, rgba(255, 255, 255, 0));
+    }
+  }
+}
+.bgDeg135 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+
+  &::after {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  &::before {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+  }
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+
+    &::after {
+      background: linear-gradient(180deg, #545960, rgba(255, 255, 255, 0));
+    }
+    &::before {
+      background: linear-gradient(90deg, #545960, rgba(255, 255, 255, 0));
+    }
+  }
+}
+.bgDeg225 {
+  background: linear-gradient(
+    225deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+
+  &::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  &::before {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+  }
+  &:hover {
+    background: linear-gradient(
+      225deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+
+    &::after {
+      background: linear-gradient(180deg, #545960, rgba(255, 255, 255, 0));
+    }
+    &::before {
+      background: linear-gradient(270deg, #545960, rgba(255, 255, 255, 0));
+    }
+  }
+}

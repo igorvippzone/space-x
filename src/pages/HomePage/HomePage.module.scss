@@ -1,0 +1,122 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  padding-bottom: 50px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 50px;
+    & .button {
+      width: 100%;
+    }
+  }
+}
+
+.wrapperTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & .title {
+    font-size: 50px;
+    margin: 0;
+
+    display: list-item;
+    background-image: linear-gradient(90deg, #fff, #ff4005);
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.27rem;
+
+    @media (max-width: 1199px) {
+      font-size: 4.2vw;
+      z-index: 2;
+    }
+    @media (max-width: 767px) {
+      font-size: 32px;
+      z-index: 2;
+    }
+
+    // & .titleTop {
+    //   text-transform: uppercase;
+    //   font-weight: 700;
+    //   letter-spacing: 0.27rem;
+    // }
+  }
+  & .titleBottom {
+    font-weight: 300;
+    font-size: 20px;
+
+    margin: 0;
+
+    display: list-item;
+    background-image: linear-gradient(90deg, #fff, #ff4005);
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+    margin-bottom: 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  & .planet {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & img {
+      pointer-events: none;
+      user-select: none;
+    }
+    & .line {
+      position: absolute;
+
+      height: 50px;
+      bottom: 72px;
+      left: calc(50% - 27px);
+      width: 90%;
+      transform: translateX(-100%);
+
+      @media (max-width: 1199px) {
+        width: 27vw;
+      }
+      @media (max-width: 991px) {
+        width: 21vw;
+      }
+      span {
+        display: block;
+        transform: skew(45deg);
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+        width: 100%;
+        height: 100%;
+
+        border-image: linear-gradient(#97979733, #ffffff);
+        border-image-slice: 1;
+
+        border-image: linear-gradient(#97979733, #ffffff);
+        -moz-border-image: -moz-linear-gradient(#97979733, #ffffff);
+        -webkit-border-image: -webkit-linear-gradient(#97979733, #ffffff);
+        border-image-slice: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -24px;
+        bottom: 0;
+        transform: translateY(50%) translateX(100%);
+        border-radius: 50%;
+        border: 1px solid #fff;
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+}

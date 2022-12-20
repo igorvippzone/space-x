@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+    url('./assets/fonts/MuseoSansCyrl-100.ttf') format('truetype'),
+    url('./assets/fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/MuseoSansCyrl-100.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+    url('./assets/fonts/MuseoSansCyrl-300.ttf') format('truetype'),
+    url('./assets/fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/MuseoSansCyrl-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+    url('./assets/fonts/MuseoSansCyrl-700.ttf') format('truetype'),
+    url('./assets/fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/MuseoSansCyrl-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #060e17;
+  color: #fff;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#root {
+  background: url(./assets/images/bg.jpg) no-repeat top, #060e17;
+  background-repeat: repeat-y;
+  min-height: 660px;
+}
+
+.no-scroll{
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}

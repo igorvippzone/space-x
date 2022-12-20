@@ -1,0 +1,125 @@
+.button {
+  background-color: rgba(22, 21, 29, 0.502);
+  border: none;
+  color: #dad9d9;
+  cursor: pointer;
+  padding: 10px 14px;
+
+  font-weight: 100;
+  font-size: 14px;
+  font-family: MuseoSansCyrl, sans-serif;
+  position: relative;
+
+  transition: background-color 0.3s, color .3s;
+  &:hover {
+    background-color: rgba(37, 29, 90, 0.502);
+    color: #fff;
+    & .borderLine {
+      &::after,
+      &::before {
+        filter: brightness(2);
+      }
+    }
+
+    & .lighter::before{
+      filter: blur(10px);
+    }
+  }
+
+  & .borderLine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+
+    &::after,
+    &::before {
+      filter: brightness(1);
+      transition: filter 0.3s;
+    }
+  }
+  & .borderLine:nth-child(1) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, #3969a6, #101f2d);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(0deg, #3969a6, #101f2d);
+    }
+  }
+  & .borderLine:nth-child(2) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(270deg, #3969a6, #101f2d);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, #3969a6, #101f2d);
+    }
+  }
+
+  & .lighter {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border: 1px solid #fff;
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      background: #fff;
+      border-radius: 50%;
+      filter: blur(4px);
+
+      transition: filter .3s;
+    }
+  }
+
+  & .lighter:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-top: none;
+    border-right: none;
+
+    &::before {
+      transform: translate(-50%, 50%);
+    }
+  }
+  & .lighter:nth-child(4) {
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    border-left: none;
+
+    &::before {
+      transform: translate(30%, -30%);
+    }
+  }
+}
